@@ -1,0 +1,53 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>jQuery Multi Select Dropdown with Checkboxes</title>
+
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/css/bootstrap-multiselect.css" rel="stylesheet" />
+</head>
+<body>
+    <form id="form1">
+        <div style="padding:20px;">
+            <select id="chkveg" multiple="multiple">
+                <option id="cheese" value="cheese">Cheese</option>
+                <option value="tomatoes">Tomatoes</option>
+                <option value="mozarella">Mozzarella</option>
+                <option value="mushrooms">Mushrooms</option>
+                <option value="pepperoni">Pepperoni</option>
+                <option value="onions">Onions</option>
+            </select>
+            <br /><br />
+            <input type="button" id="btnget" value="Get Selected Values" />
+        </div>
+    </form>
+
+    <script src="~/Scripts/jquery-3.1.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/js/bootstrap-multiselect.js"></script>
+    <script type="text/javascript">
+			            	    $(function() {
+			            	        $('#chkveg').multiselect({
+			            	            includeSelectAllOption: true
+			            	        });
+			            	        $('#btnget').click(function() {
+			            	        alert($('#chkveg').val());
+			            	        })
+			            	    });
+
+
+    </script>
+    <script type="text/javascript">
+			    $(document).ready(function() {
+			    $('#chkveg').multiselect();
+			    });
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,119 @@
+﻿@model IEnumerable<FinalYearProject.Models.Notification>
+
+@{
+    ViewBag.Title = "Notification";
+    int i = 0;
+}
+<script type="text/javascript" src="~/Scripts/jquery-3.1.1.min.js"></script>
+<script>
+    $(document).ready(function ()
+    {
+        $('.decline').click
+        (
+            function (event)
+            {
+                not_id = $(this).val();
+            }
+        );
+        $('.accept').click
+        (
+            function (event)
+            {
+                var id = $(this).val();
+                $.getJSON("/Doctor/SaveAppointment", { "name": id}, function (successResult) {
+                    if (successResult == true) {
+                        alert("Appointment has been saved successfully.")
+                    }
+                    else {
+                    }
+                });
+            }
+          );
+        $("#date").on('input', function (event)
+        {
+            var temp = $(this).val();
+            $.getJSON
+            (
+                {
+                    url: '/Doctor/GetNotifications',
+                    type: 'Post',
+                    dataType: 'json',
+                    data: {'notification' : not_id , 'date' : temp},
+                    success: function (data)
+                    {
+                        $("#time").html(data);
+                    },
+                    error: function (data)
+                    {
+                    }
+                }
+            )
+        });
+        $('.save').on('click',function (event) {
+                var Appointment_date = $("#date").val();
+                var Appointment_time = $("#time").val();
+                $.getJSON
+                (
+                    {
+                        url: '/Doctor/SaveAlternateAppointment',
+                        type: 'Post',
+                        dataType: 'json',
+                        data: { 'date': Appointment_date, 'time': Appointment_time, "id" : not_id },
+                        success: function (data) {
+                            $("#time").html(data);
+                        },
+                        error: function (data) {
+                            alert("hello")
+                        }
+                    }
+                )
+            }
+          );
+    });
+
+</script>
+<br /><br /><br /><br /><br /><br />
+
+<div class="container">
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Select alternate Date and time</h4>
+                </div>
+                <div class="modal-body">
+                    <input id="date" name="date" type="text" class="form-control" placeholder="Select Date for Appointment" onfocus="(this.type='date')">
+                    <select id="time" class="form-control" name="time"></select>
+                </div>
+                <div class="modal-footer">
+                    <button id="save" name="save" type="button" class="btn btn-default accept save" data-dismiss="modal">Save</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <h2>All Notifications</h2><br />
+    @foreach (var item in Model)
+    {
+        <div class="row">
+            <div class="col-xs-2"></div>
+            <div class="col col-xs-8">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                        <b>@item.Name</b>
+                        <span class="pull-right">@Html.DisplayFor(modelItem => item.StartTime)  </span>
+                        <br />
+                        <div class="col-xs-1"></div>@item.Message
+                        <button id="@i" value="@i" name="accept" class="pull-right btn-success accept">accept</button>
+                        <button id="@i" value="@i" name="decline" class="pull-right btn-danger decline" data-toggle="modal" data-target="#myModal">decline</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        i++;
+    }
+
+</div>

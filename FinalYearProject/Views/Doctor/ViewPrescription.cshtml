@@ -1,0 +1,77 @@
+﻿@using PagedList;
+@using PagedList.Mvc;
+@model IPagedList<FinalYearProject.Models.Prescription>
+@using FinalYearProject.Models;
+
+@{
+    ViewBag.Title = "Prescriptions";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<br /><br /><br /><br /><br />
+
+<div style="font-family:Arial">
+
+
+    <h2>Prescriptions</h2>
+    <hr />
+    <div class="row">
+        <div class="col-xs-4">
+            @foreach (var item in Model)
+            {
+                <span>
+                    <b>Actions : </b>
+                    @Html.ActionLink("Edit", "EditPrescription", "Doctor", new { id = item.Prescription_Id },null) |
+                    @Html.ActionLink("Delete", "DeletePrescription", "Doctor", new { id = item.Prescription_Id }, null)
+                </span>
+                <table border="1" class="table table-bordered table-condensed">
+                    <tr>
+                        <td>
+                            <b>Name:</b>
+                        </td>
+                        <td>
+                            @item.Medicine_Name
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <b>Type:</b>
+                        </td>
+                        <td>
+                            @item.Type
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <b>Amount:</b>
+                        </td>
+                        <td>
+                            @item.Amount
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <b>Frequency:</b>
+                        </td>
+                        <td>
+                            @item.Frequency
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <b>Purpose:</b>
+                        </td>
+                        <td>
+                            @item.Purpose
+                        </td>
+                    </tr>
+                </table>
+            }
+        </div>
+    </div>
+    <div class="row">
+        @Html.ActionLink("Back to List", "GetMyPatients")
+    </div>
+</div>
+

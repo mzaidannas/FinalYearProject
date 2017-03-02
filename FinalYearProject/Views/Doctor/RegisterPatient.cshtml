@@ -1,0 +1,112 @@
+﻿@model FinalYearProject.Models.Full_Patient
+
+@{
+    ViewBag.Title = "RegisterPatient";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Health Care, health" />
+    <meta name="description" content="Health Care HTML Template" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- favicon links -->
+    <link rel="shortcut icon" type="image/ico" href="favicon.ico" />
+    <link rel="icon" type="image/ico" href="favicon.ico" />
+    <!--Google web fonts-->
+    <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+
+    <!-- main css -->
+    <link rel="stylesheet" href="~/Content/Index.css" media="screen" />
+    <link rel="stylesheet" href="~/Content/bootstrap.min.css" media="screen" />
+    <link rel="stylesheet" id="theme-color" type="text/css" href="#" />
+
+
+    <!--page title-->
+    <title> Index - Patient Doctor Assistant</title>
+</head>
+<body>
+    <br /><br /><br /><br />
+    <!--Pre loader start-->
+    <div id="preloader">
+        <div id="status"><img src="~/images/loader.gif" id="preloader_image" width="36" height="36" alt="loading image" /></div>
+    </div>
+    <!--pre loader end-->
+    <!--Book an Appointment start-->
+    <div class="col-lg-6 col-md-5 col-sm-12">
+        <h4 class="hs_heading" id="hs_appointment_form_link">Register Patient</h4>
+        <div class="hs_appointment_form_div">
+            <img src="~/images/bg/appointment_form.jpg" width="512" height="520" alt="" />
+            <div class="hs_appointment_form">
+
+                @using (Html.BeginForm("RegisterPatient", "Doctor", FormMethod.Post))
+                {
+                    <div class="row">
+                        <div class="col-lg-6 col-md-7 col-sm-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="Name" name="Name" placeholder="Full Name " required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" id="Email" name="Email" placeholder="Email " required>
+                            </div>
+                            <div class="form-group">
+                                <input type="number" class="form-control" id="Phone" name="Phone" placeholder="Phone " required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" id="CNIC" name="CNIC" class="form-control" placeholder="CNIC" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" id="Address" name="Address" class="form-control" placeholder="Address" required>
+                            </div>
+                            <div class="form-group">
+                                <input id="DOB" name="DOB" type="text" class="form-control" placeholder="Date Of Birth" onfocus="(this.type='date')">
+                            </div>
+                            <div class="form-group">
+                                <select class="form-control" id="Gender" name="Gender" required>
+                                    <option>Select Gender</option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                    <option value="Female">Others</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <select class="form-control" id="Blood_Group" name="Blood_Group" required>
+                                    <option>Select Blood Group</option>
+                                    <option value="A+">A+</option>
+                                    <option value="A-">A-</option>
+                                    <option value="B+">B+</option>
+                                    <option value="B-">B-</option>
+                                    <option value="AB+">AB+</option>
+                                    <option value="AB-">AB-</option>
+                                    <option value="O+">O+</option>
+                                    <option value="O-">O-</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" id="Insurance_No" name="Insurance_No" class="form-control" placeholder="Insurance Number" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-3 col-md-4 col-sm-3">
+                            <button type="submit" id="slider_book_apo" class="btn btn-default">Submit</button>
+                        </div>
+                    </div>
+                    <p id="appointment_err"></p>
+                }
+            </div>
+        </div>
+    </div>
+    <script src="~/Scripts/scrollTo.min.js"></script>
+    <!--Book an Appointment end-->
+    <!--main js file start-->
+    <script type="text/javascript" src="~/Scripts/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/Index.js"></script>
+    <!--main js file end-->
+</body>
+<!-- Mirrored from kamleshyadav.com/healthcare/one-page.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 08 Jan 2016 09:57:30 GMT -->
+</html>

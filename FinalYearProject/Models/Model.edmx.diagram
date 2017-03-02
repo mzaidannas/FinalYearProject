@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="02aa5b22c9be45b8b004f071d8b12373" Name="Diagram1" ZoomLevel="99">
+        <EntityTypeShape EntityType="DatabaseModel.Doctor" Width="1.5" PointX="0.5" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.Patient" Width="1.5" PointX="6.25" PointY="1" />
+        <EntityTypeShape EntityType="DatabaseModel.Login" Width="1.5" PointX="5.75" PointY="4.25" />
+        <EntityTypeShape EntityType="DatabaseModel.PatientDoctors" Width="1.5" PointX="1.625" PointY="4" />
+        <EntityTypeShape EntityType="DatabaseModel.Comment" Width="1.5" PointX="1.875" PointY="6.125" />
+        <AssociationConnector Association="DatabaseModel.DoctorComment" />
+        <AssociationConnector Association="DatabaseModel.CommentPatient" />
+        <EntityTypeShape EntityType="DatabaseModel.Patient_History" Width="1.5" PointX="5.75" PointY="6.625" />
+        <AssociationConnector Association="DatabaseModel.Patient_HistoryPatient" />
+        <EntityTypeShape EntityType="DatabaseModel.Appointment" Width="1.5" PointX="3.875" PointY="7.5" />
+        <AssociationConnector Association="DatabaseModel.AppointmentDoctor" />
+        <AssociationConnector Association="DatabaseModel.PatientAppointment" />
+        <EntityTypeShape EntityType="DatabaseModel.Prescription" Width="1.5" PointX="6" PointY="8.75" />
+        <AssociationConnector Association="DatabaseModel.PrescriptionDoctor" />
+        <AssociationConnector Association="DatabaseModel.PrescriptionPatient" />
+        <EntityTypeShape EntityType="DatabaseModel.Person" Width="1.5" PointX="3.625" PointY="0.5" />
+        <AssociationConnector Association="DatabaseModel.FK_DoctorPerson" />
+        <AssociationConnector Association="DatabaseModel.FK_PersonLogin" />
+        <AssociationConnector Association="DatabaseModel.FK_PersonPatient" />
+        <EntityTypeShape EntityType="DatabaseModel.Notification" Width="1.5" PointX="8.625" PointY="2.5" />
+        <AssociationConnector Association="DatabaseModel.DoctorNotification" />
+        <AssociationConnector Association="DatabaseModel.FK_PatientNotification" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

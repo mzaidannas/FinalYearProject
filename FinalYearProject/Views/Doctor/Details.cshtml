@@ -1,0 +1,110 @@
+﻿@model FinalYearProject.Models.Full_Patient
+@using FinalYearProject.Models;
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<br /><br /><br /><br /><br />
+<div style="font-family:Arial">
+
+    <h2>@Model.Name's Detail</h2>
+    <hr />
+    <div class="row">
+        <div class="col-xs-6">
+            <table border="1" class="table table-condensed">
+                <tr>
+                    <td>
+                        <b>Name :</b>
+                    </td>
+                    <td>
+                        @Model.Name
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <b>Insurance No. :</b>
+                    </td>
+                    <td>
+                        @Model.Insurance_No
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <b>Email :</b>
+                    </td>
+                    <td>
+                        @Model.Email
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <b>Date of Birth :</b>
+                    </td>
+                    <td>
+                        @Model.DOB.Value.ToString(" dd-MM-yyyy")
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <b>Gender :</b>
+                    </td>
+                    <td>
+                        @Model.Gender
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <b>Phone Number :</b>
+                    </td>
+                    <td>
+                        @Model.Phone
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <b>Address :</b>
+                    </td>
+                    <td>
+                        @Model.Address
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <b>Blood Group :</b>
+                    </td>
+                    <td>
+                        @Model.Blood_Group
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-6">
+            <table border="1" class="table table-condensed">
+                @foreach (string history_item in ViewBag.History)
+                {
+                    <tr>
+                        <td>
+                            @history_item
+                        </td>
+                    </tr>
+                }
+            </table>
+        </div>
+    </div>
+
+    <hr />
+    <div class="row">
+        @Html.ActionLink("Back to List", "GetMyPatients")
+    </div>
+</div>
+

@@ -1,0 +1,73 @@
+﻿@model FinalYearProject.Models.Full_Doctor
+
+@{
+    ViewBag.Title = "Profile";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<br /><br /><br /><br /><br />
+<body>
+    <div class="hs_page_title">
+        <div class="container">
+            <h3>Dr. @Model.Name's Profile</h3>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="hs_single_profile">
+                    <img src="~/@Model.Image_Path" alt="Doctor" />
+                    <div class="hs_single_profile_detail">
+                        <h3>Dr. @Model.Name</h3>
+                        <div class="row">
+                            <div class="col-lg-3 col-md-6 col-sm-6"> <i class="fa fa-user-md"></i>Experience: <a href="#">@(DateTime.Now.Year - Model.Career_Start.Year) Year</a> </div>
+                            <div class="col-lg-5 col-md-6 col-sm-6"> <i class="fa fa-medkit"></i>Specialist On: <a href="#">@Model.Type</a> </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6"> <i class="fa fa-medkit"></i>Email ID: <a href="#">@Model.Email</a> </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-lg-4 col-md-6 col-sm-6"> <i class="fa fa-phone"></i>Phone No: <a href="#">@Model.Phone</a> </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                Get connect with him:
+                                <div class="hs_profile_social">
+                                    <ul>
+                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-skype"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hs_margin_40"></div>
+    </div>
+
+    <!--Happy Patients start-->
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+            <h2 class="">Comments on Dr. @Model.Name</h2>
+            <div class="hs_testimonial">
+                <ul class="bxslider">
+                    @foreach (var item in Model.Comments)
+                    {
+                        <li>
+                            <div class="hs_testimonial_content">
+                                <div class="col-lg-8 col-md-8 col-sm-8 col-lg-offset-2 col-md-offset-2 col-sm-offset-2">
+                                    <p><i class="fa fa-quote-left"></i>@item.Text <i class="fa fa-quote-right"></i></p>
+                                    <h4 class="hs_theme_color">@item.Pat_Name </h4>
+                                </div>
+                            </div>
+                        </li>
+                    }
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--Happy Patients end-->
+</body>
+
+
