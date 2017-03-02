@@ -25,10 +25,10 @@ namespace FinalYearProject.Controllers
             db = new DatabaseEntities();
 
             // AppHarbur SQL Server
-            //string connectionString = @"Data Source=810649c0-b374-4c9f-83f4-a72200d16193.sqlserver.sequelizer.com;Initial Catalog=db810649c0b3744c9f83f4a72200d16193;User ID=ysuguooalqevqoko;Password=RRvkdxvyqvWeDjBw3H7DdZyWEPsc3yPuEMuHzT4Jvy8zVDDrkV7fK3DYsGNwesEZ;App=EntityFramework";
+            string connectionString = @"Data Source=810649c0-b374-4c9f-83f4-a72200d16193.sqlserver.sequelizer.com;Initial Catalog=db810649c0b3744c9f83f4a72200d16193;User ID=ysuguooalqevqoko;Password=RRvkdxvyqvWeDjBw3H7DdZyWEPsc3yPuEMuHzT4Jvy8zVDDrkV7fK3DYsGNwesEZ;App=EntityFramework";
 
             // Local SQL Server
-            string connectionString = @"Data Source=ANNAS;Initial Catalog=PDA;User ID=sa;Password=52114799;MultipleActiveResultSets=true;App=EntityFramework";
+            //string connectionString = @"Data Source=ANNAS;Initial Catalog=PDA;User ID=sa;Password=52114799;MultipleActiveResultSets=true;App=EntityFramework";
 
             SqlTableDependency<Appointment> tableDependency = new SqlTableDependency<Appointment>(connectionString, "Appointments");
 

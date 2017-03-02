@@ -321,21 +321,21 @@
 
 
     <!-- js library -->
-    <script type="text/javascript" src="~/Scripts/jquery-3.1.1.min.js"></script>
-    <script type="text/javascript" src="~/Scripts/jquery-ui-1.12.1.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/jquery-ui-1.11.4.min.js"></script>
     <script type="text/javascript" src="~/Scripts/bootstrap.min.js"></script>
     <script type="text/javascript" src="~/Scripts/jquery.icheck.min.js"></script>
-    @*<script type="text/javascript" src="~/Scripts/waypoints.min.js"></script>*@
-    <script type="text/javascript" src="~/Scripts/jquery.waypoints.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/waypoints.min.js"></script>
+    @*<script type="text/javascript" src="~/Scripts/jquery.waypoints.min.js"></script>*@
 
     <!-- authenty js -->
-    <script src="~/Scripts/authenty.js"></script>
+    <script type="text/javascript" src="~/Scripts/authenty.js"></script>
 
     <!-- preview scripts -->
-    <script src="~/Scripts/jquery.malihu.PageScroll2id.min.js"></script>
-    <script src="~/Scripts/jquery.address-1.6.min.js"></script>
-    <script src="~/Scripts/scrollTo.min.js"></script>
-    <script src="~/Scripts/init.js"></script>
+    <script type="text/javascript" src="~/Scripts/jquery.malihu.PageScroll2id.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/jquery.address-1.6.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/scrollTo.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/init.js"></script>
 
     <!-- preview scripts -->
     <script>
@@ -369,8 +369,7 @@
                 target.focus();
             }, {
                 offset: 300
-            });
-            $('section').waypoint(function (direction) {
+            }).waypoint(function (direction) {
                 var target = $(this).find('input[type=text], input[type=email]').filter(':visible:first');
                 target.focus();
             }, {
@@ -396,8 +395,7 @@
                 }
             }, {
                 offset: '90%'
-            });
-            $('[data-animation]').waypoint(function (direction) {
+            }).waypoint(function (direction) {
                 if (direction == "up") {
                     $(this).removeClass("animated " + $(this).data("animation"));
                 }
