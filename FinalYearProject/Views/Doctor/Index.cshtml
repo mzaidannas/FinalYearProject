@@ -7,140 +7,137 @@
 
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset='utf-8' />
-        <title>Home</title>
-        <link rel="stylesheet" href="~/Content/Index.css" media="screen" />
-        <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<head>
+    <meta charset='utf-8' />
+    <title>Home</title>
+    <link rel="stylesheet" href="~/Content/Index.css" media="screen" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
 
-        <link href='~/Content/FullCalendar/fullcalendar.css' rel='stylesheet' />
-        <link href='~/Content/FullCalendar/fullcalendar.print.css' rel='stylesheet' media='print' />
+    <link href='~/Content/FullCalendar/fullcalendar.css' rel='stylesheet' />
+    <link href='~/Content/FullCalendar/fullcalendar.print.css' rel='stylesheet' media='print' />
 
-        <style>
-            body
-            {
-                margin: 40px 10px;
-                padding: 0;
-                font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
-                font-size: 14px;
-            }
+    <style>
+        body {
+            margin: 40px 10px;
+            padding: 0;
+            font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
+            font-size: 14px;
+        }
 
-            #calendar
-            {
-                max-width: 900px;
-                margin: 0 auto;
-            }
-        </style>
-    </head>
-    <body>
-        <!--header start-->
-        <header id="hs_header" class="hc_fixed_header navbar-fixed-top">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12 col-md-12 col-sm-12 clearfix">
-                        <div class="col-lg-2 col-md-2 col-sm-12">
-                            <div id="hs_logo"> <a data-link="hc_home"> <img src="~/images/logo.png" alt=""> </a> </div>
-                            <!-- #logo -->
-                        </div>
-                        <div class="col-lg-8 col-md-8 col-sm-12">
-                            <button type="button" class="hs_nav_toggle navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">Menu<i class="fa fa-bars"></i></button>
-                            <br />
-                            <nav>
-                                <ul class="hs_menu collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                                    <li data-link="hc_home"><a href="#" onclick="location.href='@Url.Action("Index","Doctor")'" class="active">Home</a></li>
-                                    <li data-link="hc_home"><a href="#" onclick="location.href='@Url.Action("GetMyPatients","Doctor")'" class="active">My Patients</a></li>
-                                    <li data-link="hc_service"><a href="#" onclick="location.href='@Url.Action("RegisterPatient","Doctor")'">Add Patient</a></li>
-                                    <li data-link="hc_about"><a href="#" onclick="location.href='@Url.Action("DoctorProfile","Doctor")'">Profile</a></li>
-                                    <li data-link="hc_about">
-                                        <a href="#" onclick="location.href='@Url.Action("Notification","Doctor")'">Notifications</a>
-                                        <span class="badge">@ViewBag.count</span>
-                                    </li>
-                                </ul>
-                            </nav>
-                            <br /><br />
-                        </div>
-                        <div class="col-lg-2 col-md-2 col-sm-4">
-                            <br />
-                            <div class="hs_social" style="margin-left:80px">
-                                <ul>
-                                    <li data-link="hc_home"><a href="#" onclick="location.href='@Url.Action("Logout","Doctor")'" class="active">Logout</a></li>
-                                </ul>
-                            </div>
-                            <div class="hs_search_box">
-                                <form class="form-inline" role="form">
-                                    <div class="form-group has-success has-feedback">
-                                        <input type="text" class="form-control" id="inputSuccess4" placeholder="Search Doctor">
-                                        <span class="glyphicon glyphicon-search form-control-feedback"></span>
-                                    </div>
-                                </form>
-                            </div>
-
-                            <!-- #logo -->
-                        </div>
+        #calendar {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <!--header start-->
+    <header id="hs_header" class="hc_fixed_header navbar-fixed-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 clearfix">
+                    <div class="col-lg-2 col-md-2 col-sm-12">
+                        <div id="hs_logo"> <a data-link="hc_home"> <img src="~/images/logo.png" alt=""> </a> </div>
+                        <!-- #logo -->
                     </div>
-                    <!-- .col-md-12 -->
-                </div>
-                <!-- .row -->
-            </div>
-            <!-- .container -->
-
-        </header>
-        <!--header end-->
-        <br /><br /><br /><br /><br />
-        <div id='calendar'></div>
-        <br /><br /><br /><br /><br />
-        <footer id="hs_footer">
-            <div class="container fixed" style="margin-bottom:75px">
-                <div class="hs_footer_content">
-                    <div class="row">
-                        <div class="col-lg-12 col-md-12 col-sm-12">
-                            <div class="row">
-                                <div class="col-lg-6 col-md-5 col-sm-12">
-                                    <h4 class="hs_heading">Get in touch !</h4>
-                                    <div class="hs_contact_detail">
-                                        <p><i class="fa fa-map-marker"></i>Punjab University College of Information Technology PUCIT</p>
-                                        <p><i class="fa fa-mobile-phone"></i> +92 312 - 43 45 811</p>
-                                        <div class="clearfix"></div>
-                                        <div class="hs_social">
-                                            <ul>
-                                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
+                    <div class="col-lg-8 col-md-8 col-sm-12">
+                        <button type="button" class="hs_nav_toggle navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">Menu<i class="fa fa-bars"></i></button>
+                        <br />
+                        <nav>
+                            <ul class="hs_menu collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                <li data-link="hc_home"><a href="#" onclick="location.href='@Url.Action("Index","Doctor")'" class="active">Home</a></li>
+                                <li data-link="hc_home"><a href="#" onclick="location.href='@Url.Action("GetMyPatients","Doctor")'" class="active">My Patients</a></li>
+                                <li data-link="hc_service"><a href="#" onclick="location.href='@Url.Action("RegisterPatient","Doctor")'">Add Patient</a></li>
+                                <li data-link="hc_about"><a href="#" onclick="location.href='@Url.Action("DoctorProfile","Doctor")'">Profile</a></li>
+                                <li data-link="hc_about">
+                                    <a href="#" onclick="location.href='@Url.Action("Notification","Doctor")'">Notifications</a>
+                                    <span class="badge">@ViewBag.count</span>
+                                </li>
+                            </ul>
+                        </nav>
+                        <br /><br />
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4">
+                        <br />
+                        <div class="hs_social" style="margin-left:80px">
+                            <ul>
+                                <li data-link="hc_home"><a href="#" onclick="location.href='@Url.Action("Logout","Doctor")'" class="active">Logout</a></li>
+                            </ul>
+                        </div>
+                        <div class="hs_search_box">
+                            <form class="form-inline" role="form">
+                                <div class="form-group has-success has-feedback">
+                                    <input type="text" class="form-control" id="inputSuccess4" placeholder="Search Doctor">
+                                    <span class="glyphicon glyphicon-search form-control-feedback"></span>
                                 </div>
-                                <div class="col-lg-6 col-md-7 col-sm-12">
-                                    <h4 class="hs_heading">Useful Links</h4>
+                            </form>
+                        </div>
+
+                        <!-- #logo -->
+                    </div>
+                </div>
+                <!-- .col-md-12 -->
+            </div>
+            <!-- .row -->
+        </div>
+        <!-- .container -->
+
+    </header>
+    <!--header end-->
+    <br /><br /><br /><br /><br />
+    <div id='calendar'></div>
+    <br /><br /><br /><br /><br />
+    <footer id="hs_footer">
+        <div class="container fixed" style="margin-bottom:75px">
+            <div class="hs_footer_content">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-5 col-sm-12">
+                                <h4 class="hs_heading">Get in touch !</h4>
+                                <div class="hs_contact_detail">
+                                    <p><i class="fa fa-map-marker"></i>Punjab University College of Information Technology PUCIT</p>
+                                    <p><i class="fa fa-mobile-phone"></i> +92 312 - 43 45 811</p>
                                     <div class="clearfix"></div>
-                                    <div class="hs_footer_link">
+                                    <div class="hs_social">
                                         <ul>
-                                            <li><a href="services.html">Pediatric Clinic</a></li>
-                                            <li><a href="services.html">Dental Clinic</a></li>
-                                            <li><a href="services.html">General Surgery</a></li>
-                                            <li><a href="services.html">Physiotherapy</a></li>
-                                            <li><a href="services.html">Ltricies lputate</a></li>
+                                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
+                            <div class="col-lg-6 col-md-7 col-sm-12">
+                                <h4 class="hs_heading">Useful Links</h4>
+                                <div class="clearfix"></div>
+                                <div class="hs_footer_link">
+                                    <ul>
+                                        <li><a href="services.html">Pediatric Clinic</a></li>
+                                        <li><a href="services.html">Dental Clinic</a></li>
+                                        <li><a href="services.html">General Surgery</a></li>
+                                        <li><a href="services.html">Physiotherapy</a></li>
+                                        <li><a href="services.html">Ltricies lputate</a></li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </footer>
-        <div class="hs_copyright"> Copyright © 2016 Patient Doctor Assistant All Rights Reserved </div>
+        </div>
+    </footer>
+    <div class="hs_copyright"> Copyright © 2016 Patient Doctor Assistant All Rights Reserved </div>
 
-        <script type="text/javascript" src="~/Scripts/jquery-2.2.4.min.js"></script>
-        <script type="text/javascript" src='~/Scripts/FullCalender/moment.min.js'></script>
-        <script type="text/javascript" src='~/Scripts/FullCalender/fullcalendar.min.js'></script>
-        <script>
+    <script type="text/javascript" src="~/Scripts/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src='~/Scripts/FullCalender/moment.min.js'></script>
+    <script type="text/javascript" src='~/Scripts/FullCalender/fullcalendar.min.js'></script>
+    <script>
 
         $(document).ready
         (
-            function ()
-            {
+            function () {
                 $('#calendar').fullCalendar
                 (
                     {
@@ -152,6 +149,6 @@
                 );
             }
          );
-        </script>
-    </body>
+    </script>
+</body>
 </html>
