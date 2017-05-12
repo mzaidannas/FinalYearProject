@@ -421,3 +421,7 @@ CREATE INDEX [IX_FK_PatientNotification]
 ON [dbo].[Notifications]
     ([Pat_Id]);
 GO
+
+-- --------------------------------------------------
+-- Script has ended
+-- --------------------------------------------------
