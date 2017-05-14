@@ -232,6 +232,9 @@
     <Content Include="Global.asax" />
     <Content Include="images\about\about1.jpg" />
     <Content Include="images\about\about1O.jpg" />
+    <Content Include="images\about\ship.jpg" />
+    <Content Include="images\about\ship1.jpg" />
+    <Content Include="images\about\subs\about1.jpg" />
     <Content Include="images\bg\appointment_form.jpg" />
     <Content Include="images\bg\upcomming_event.png" />
     <Content Include="images\blog\blog_categories1.jpg" />
@@ -245,6 +248,7 @@
     <Content Include="images\event\up_comming_event1.jpg" />
     <Content Include="images\event\up_comming_event2.jpg" />
     <Content Include="images\event\up_comming_event3.jpg" />
+    <Content Include="images\help.gif" />
     <Content Include="images\hospital_update1.png" />
     <Content Include="images\icon\bx_loader.gif" />
     <Content Include="images\icon\center_line.png" />
@@ -254,6 +258,9 @@
     <Content Include="images\loader.gif" />
     <Content Include="images\logo.png" />
     <Content Include="images\logo0.png" />
+    <Content Include="images\logo1.png" />
+    <Content Include="images\logo12312.png" />
+    <Content Include="images\logo1Copy.png" />
     <Content Include="images\logo2.png" />
     <Content Include="images\old.png" />
     <Content Include="images\partner\partner1.png" />
@@ -301,8 +308,12 @@
     <Content Include="images\team\team_member7.png" />
     <Content Include="images\team\team_member8.png" />
     <Content Include="images\team\team_member9.png" />
+    <Content Include="images\team\team_member_AK.JPG" />
+    <Content Include="images\team\team_member_AS.jpg" />
+    <Content Include="images\team\team_member_FC.JPG" />
     <Content Include="images\team\team_member_HGA.jpg" />
     <Content Include="images\team\team_member_JZD.jpg" />
+    <Content Include="images\team\team_member_SA.JPG" />
     <Content Include="images\team\team_member_SMQA.jpg" />
     <Content Include="images\team\team_member_ZA.jpg" />
     <Content Include="images\testimonial\patients_testimonials.png" />
@@ -542,6 +553,7 @@
     <Content Include="Scripts\waypoints.min.js" />
     <Content Include="Scripts\zepto.waypoints.js" />
     <Content Include="Scripts\zepto.waypoints.min.js" />
+    <Content Include="Views\Home\FAQ.html" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -652,6 +664,8 @@
     <Content Include="Views\Help\Index.cshtml" />
     <Content Include="Scripts\jquery-3.1.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.1.1.min.map" />
+    <Content Include="Views\Home\helpindex.cshtml" />
+    <Content Include="Views\Account\Signup.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

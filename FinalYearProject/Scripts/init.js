@@ -36,7 +36,7 @@
 jQuery.noConflict();
 (function($){
 	/* functions to run when content loads */
-	$(window).load(function(){
+	$(window).on('load', function(){
 		$("#navigation_menu a,a[href='#top'],a[rel='m_PageScroll2id']").mPageScroll2id();
 		$("#navigation_menu a,a[href='#top'],a[rel='m_PageScroll2id']").address();
 		$.address.externalChange(function(event){ 
