@@ -21,8 +21,8 @@ namespace FinalYearProject.Controllers
             db = new DatabaseEntities();
 
             //Database Change Detection
-            var connectionString = @"Data Source=ANNAS;Database=PDA;User ID=sa;Password=52114799;MultipleActiveResultSets=True;App=EntityFramework;";
-            //var connectionString = @"Data Source=810649c0-b374-4c9f-83f4-a72200d16193.sqlserver.sequelizer.com;Database=db810649c0b3744c9f83f4a72200d16193;User ID=ysuguooalqevqoko;Password=RRvkdxvyqvWeDjBw3H7DdZyWEPsc3yPuEMuHzT4Jvy8zVDDrkV7fK3DYsGNwesEZ;MultipleActiveResultSets=True;App=EntityFramework";
+            //var connectionString = @"Data Source=ANNAS;Database=PDA;User ID=sa;Password=52114799;MultipleActiveResultSets=True;App=EntityFramework;";
+            var connectionString = @"Data Source=810649c0-b374-4c9f-83f4-a72200d16193.sqlserver.sequelizer.com;Database=db810649c0b3744c9f83f4a72200d16193;User ID=ysuguooalqevqoko;Password=RRvkdxvyqvWeDjBw3H7DdZyWEPsc3yPuEMuHzT4Jvy8zVDDrkV7fK3DYsGNwesEZ;MultipleActiveResultSets=True;App=EntityFramework";
             var tableDependency = new SqlTableDependency<Appointment>(connectionString, "Appointments");
 
             tableDependency.OnChanged += tableDependency_Changed;

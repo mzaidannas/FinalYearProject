@@ -175,6 +175,9 @@
     <Content Include="Content\css\bootstrap-3.1.1.min.css" />
     <Content Include="Content\css\bootstrap-multiselect.css" />
     <Content Include="Content\font-awesome.css" />
+    <Content Include="Content\fullcalendar.css" />
+    <Content Include="Content\fullcalendar.min.css" />
+    <Content Include="Content\fullcalendar.print.css" />
     <Content Include="Content\FullCalendar\fullcalendar.css" />
     <Content Include="Content\FullCalendar\fullcalendar.print.css" />
     <Content Include="Content\Index.css" />
@@ -245,6 +248,7 @@
     <Content Include="images\comment\comment2.jpg" />
     <Content Include="images\comment\comment3.jpg" />
     <Content Include="images\comment\comment4.jpg" />
+    <Content Include="images\Death_to_Stock_Tactile_1.jpg" />
     <Content Include="images\event\up_comming_event1.jpg" />
     <Content Include="images\event\up_comming_event2.jpg" />
     <Content Include="images\event\up_comming_event3.jpg" />
@@ -390,8 +394,10 @@
     <Content Include="Scripts\jquery.address-1.6.min.js" />
     <Content Include="Scripts\jquery.bxslider.js" />
     <Content Include="Scripts\jquery.icheck.min.js" />
+    <Content Include="Scripts\jquery.js" />
     <Content Include="Scripts\jquery.malihu.PageScroll2id.js" />
     <Content Include="Scripts\jquery.malihu.PageScroll2id.min.js" />
+    <Content Include="Scripts\jquery.min.js" />
     <Content Include="Scripts\jquery.mixitup.min.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
@@ -538,6 +544,10 @@
     <Content Include="Scripts\noframework.waypoints.js" />
     <Content Include="Scripts\noframework.waypoints.min.js" />
     <Content Include="Scripts\owl.carousel.js" />
+    <Content Include="Scripts\preview\init.js" />
+    <Content Include="Scripts\preview\jquery.address-1.6.min.js" />
+    <Content Include="Scripts\preview\jquery.malihu.PageScroll2id.js" />
+    <Content Include="Scripts\preview\scrollTo.min.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\scrollTo.min.js" />
@@ -666,6 +676,7 @@
     <Content Include="Scripts\jquery-3.1.1.min.map" />
     <Content Include="Views\Home\helpindex.cshtml" />
     <Content Include="Views\Account\Signup.cshtml" />
+    <Content Include="Scripts\jquery.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
