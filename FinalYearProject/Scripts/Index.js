@@ -1,4 +1,4 @@
-jQuery(window).load(function () {
+jQuery(window).on( 'load', function () {
     "use strict";
    	jQuery("#status").fadeOut();
 	jQuery("#preloader").delay(350).fadeOut("slow");
