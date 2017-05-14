@@ -78,8 +78,8 @@ namespace FinalYearProject.Controllers
                 return Content("Invalid Email.");
             }
             MailMessage mail = new MailMessage("patdocas@gmail.com", email);
-            //mail.From = "m.zaid.annas@gmail.com";
-            //mail.To.Add("bcsf12a527@pucit.edu.pk");
+            //mail.From = "fazalchauhan@live.com";
+            //mail.To.Add("abdullahshahbaz89@gmail.com");
             mail.Subject = "PDA Password Recovery";
             mail.Body = "Pehle ye btao k apna password yaad ku ni rakhy??? Hain? Acha dfa kro ye lo apna Purana password. Next time care krna.\n " + password ;
             mail.IsBodyHtml = true;

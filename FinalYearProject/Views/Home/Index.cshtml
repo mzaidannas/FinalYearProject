@@ -30,7 +30,7 @@
     <link href="~/Content/Rating.css" rel="stylesheet" />
 
     <!--page title-->
-    <title>Index - Patient Doctor Assistant</title>
+    <title>Index - Health Services Coordinator </title>
 
 </head>
 <body>
@@ -74,7 +74,7 @@
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 clearfix">
                     <div class="col-lg-2 col-md-2 col-sm-12">
-                        <div id="hs_logo"> <a data-link="hc_home"> <img src="~/images/logo.png" alt=""> </a> </div>
+                        <div id="hs_logo"> <a data-link="hc_home"> <img src="~/images/logo1.png" alt=""> </a> </div>
                         <!-- #logo -->
                     </div>
                     <div class="col-lg-8 col-md-8 col-sm-12">
@@ -86,10 +86,11 @@
                                 <li data-link="hc_team"><a>our Team</a></li>
                                 <li data-link="hc_about"><a>About</a></li>
                                 <li data-link="hc_contact"><a>Contact</a></li>
+                                <li data-link="hc_help"><a href="#" onclick="location.href='@Url.Action("Index","Help")'" target="_blank">Help</a></li>
                                 <li data-link="hc_downloadapp"><a>Download App</a></li>
-                            </ul>
+                                </ul>
                         </nav>
-                    </div>
+                    </div> 
                     <div class="col-lg-2 col-md-2 col-sm-4">
                         <div class="hs_social">
                             <ul>
@@ -97,15 +98,21 @@
                                     <div class="col-md-4">
                                         <li><a href="/Account/Signin#signin_main"></i>Login</a></li>
                                     </div>
+                                    </br>
+                                    </br>
+                                    </br>
                                     <div class="col-md-5">
                                         <li><a href="/Account/Signin#signup_wizard"></i>Register</a></li>
                                     </div>
                                     @*<div class="col-md-3">
-                                            <li><a href="#" id="hs_search"><i class="fa fa-search"></i></a></li>
-                                        </div>*@
+                            <li><a href="#" id="hs_search"><i class="fa fa-search"></i></a></li>
+                        </div>*@
                                 </div>
                             </ul>
                         </div>
+                    </div>
+               </div>  
+                    
                         <div class="hs_search_box">
                             <form class="form-inline" role="form">
                                 <div class="form-group has-success has-feedback">
@@ -259,6 +266,7 @@
                                                         <option>Select Department</option>
                                                         <option value="Department 1">Department 1</option>
                                                         <option value="Department 2">Department 2</option>
+                                                        <option value="Cardiology">Cardiology</option>
                                                     </select>
                                                 </div>
                                                 <div class="form-group">
@@ -367,10 +375,10 @@
                             <h4 class="hs_heading">Who We Are</h4>
                             <div class="row hs_how_we_are">
                                 <div class="col-lg-12 col-md-12 col-sm-12">
-                                    <div class="col-lg-7 col-md-6 col-sm-12"> <img src="~/images/about/about1.jpg" alt="" /> </div>
+                                    <div class="col-lg-7 col-md-6 col-sm-12"> <img src="~/images/about/ship.jpg" alt="" /> </div>
                                     <div class="col-lg-5 col-md-6 col-sm-12">
                                         <div class="hs_how_we_are_text">
-                                            <h4>Patient Doctor Assistant</h4>
+                                            <h4>Health Services Coordinator</h4>
                                             <br /><br />
                                             <p>In this era of busy life, patient doesn’t remember the most important things like being on drip time, have to take an injection, which, when and how to take medicine. It is impossible for doctor to remind the patient time to time. If patient doesn’t follow the prescription properly, it may result in severe consequences. So this is a need of a hour to solve this problem digitally. </p>
                                             <br />
@@ -388,51 +396,65 @@
                             <div class="our_doctor_team">
                                 <div id="health_care_team_slider" class="owl-carousel owl-theme">
                                     <div class="health_care_team_slider_item">
-                                        <img src="~/images/team/team_member_HGA.jpg" alt="Hafiz Ghulam Abbas" />
+                                        <img src="~/images/team/team_member_AS.jpg" alt="Abdullah Shahbaz" />
                                         <div class="hs_team_member_detail">
                                             <a href="#">
-                                                <h4>Hafiz Ghulam Abbas</h4>
+                                                <h4>S/LT Abdullah Shahbaz PN</h4>
                                             </a>
                                             <p>Developer</p>
                                             <hr>
-                                            <p>A student of well-recognized universtiy of Pakistatn, Punjab University College of Information Technology. (PUCIT) </p>
+                                            <p>A student of well-recognized universtiy of Pakistatn, Pakistan Navy Engineering College (PNEC)  (NUST) </p>
                                         </div>
                                     </div>
                                     <div class="health_care_team_slider_item">
-                                        <img src="~/images/team/team_member_ZA.jpg" alt="Zaid Annas" />
+                                        <img src="~/images/team/team_member_AK.jpg" alt="Asad Alam" />
                                         <div class="hs_team_member_detail">
                                             <a href="#">
-                                                <h4>Zaid Annas</h4>
+                                                <h4>S/LT Asad Alam Khan PN</h4>
                                             </a>
                                             <p>Developer</p>
                                             <hr>
-                                            <p>A student of well-recognized universtiy of Pakistatn, Punjab University College of Information Technology. (PUCIT)</p>
+                                            <p>A student of well-recognized universtiy of Pakistatn, Pakistan Navy Engineering College (PNEC)  (NUST)</p>
                                         </div>
                                     </div>
                                     <div class="health_care_team_slider_item">
-                                        <img src="~/images/team/team_member_SMQA.jpg" alt="Syed Muhammad Qasim Ali" />
+                                        <img src="~/images/team/team_member_FC.jpg" alt="Fazal-u-Rehman" />
                                         <div class="hs_team_member_detail">
                                             <a href="#">
-                                                <h4>Syed Muhammad Qasim Ali</h4>
+                                                <h4>S/LT Fazal PN</h4>
                                             </a>
                                             <p>Developer</p>
                                             <hr>
-                                            <p>A student of well-recognized universtiy of Pakistatn, Punjab University College of Information Technology. (PUCIT)</p>
+                                            <p>A student of well-recognized universtiy of Pakistatn, Pakistan Navy Engineering College (PNEC)  (NUST)</p>
                                         </div>
                                     </div>
                                     <div class="health_care_team_slider_item">
-                                        <img src="~/images/team/team_member_JZD.jpg" alt="Junaid Zaka Ud Din" />
+                                        <img src="~/images/team/team_member_SA.jpg" alt="Saqlain Ashraf" />
                                         <div class="hs_team_member_detail">
                                             <a href="#">
-                                                <h4>Junaid Zaka Ud Din</h4>
+                                                <h4>S/LT Muhammad Saqlain PN</h4>
                                             </a>
                                             <p>Developer</p>
                                             <hr>
-                                            <p>A student of well-recognized universtiy of Pakistatn, Punjab University College of Information Technology. (PUCIT)</p>
+                                            <p>A student of well-recognized universtiy of Pakistatn, Pakistan Navy Engineering College (PNEC)  (NUST)</p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="customNavigation text-right"> <a class="btn_prev prev"><i class="fa fa-chevron-left"></i></a> <a class="btn_next next"><i class="fa fa-chevron-right"></i></a> </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--our work-->
+                    <div class="help-block" data-target="hc_help" id="hc_help">
+                        <div class="container-fluid">
+                            <div class="container">
+
+
+
+
+                                           
+                                    <!--Help end-->
+                                
                             </div>
                         </div>
                     </div>
@@ -560,17 +582,17 @@
                                 <ul>
                                     <li>
                                         <i class="fa fa-map-marker"></i>
-                                        <p>Punjab University College of Information Technology</p>
+                                        <p>National University of Science and Technology</p>
                                     </li>
                                     <li>
                                         <i class="fa fa-phone"></i>
-                                        <p>+92 312 - 4345811</p>
-                                        <p>+92 335 - 0370180</p>
+                                        <p>+92 334 - 3649937</p>
+                                        <p>+92 306 - 0899338</p>
                                     </li>
                                     <li>
                                         <i class="fa fa-envelope"></i>
-                                        <p><a href="Mailto:bcsf12a513@pucit.edu.pk">bcsf12a513@pucit.edu.pk</a></p>
-                                        <p><a href="Mailto:bcsf12a527@pucit.edu.pk">bcsf12a527@pucit.edu.pk</a></p>
+                                        <p><a href="Mailto:abdullahshahbaz89@gmail.com">abdullahshahbaz89@gmail.com</a></p>
+                                        <p><a href="Mailto:fazalchauhan@live.com">fazalchauhan@live.com</a></p>
                                     </li>
                                 </ul>
                             </div>
@@ -615,15 +637,15 @@
                             <div class="col-lg-6 col-md-5 col-sm-12">
                                 <h4 class="hs_heading">Get in touch !</h4>
                                 <div class="hs_contact_detail">
-                                    <p><i class="fa fa-map-marker"></i>Punjab University College of Information Technology PUCIT</p>
-                                    <p><i class="fa fa-mobile-phone"></i> +92 312 - 43 45 811</p>
+                                    <p><i class="fa fa-map-marker"></i>Pakistan Navy Engineering College (PNEC)(NUST) </p>
+                                    <p><i class="fa fa-mobile-phone"></i> +92 334 - 36499338</p>
                                     <div class="clearfix"></div>
                                     <div class="hs_social">
                                         <ul>
-                                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                            <li><a href="https://www.facebook.com/Patient-Doctor-Assistant-1633105526714618/" TARGET="_blank"><i class="fa fa-facebook"></i></a></li>
+                                            <li><a href="https://www.twitter.com/" TARGET="_blank"><i class="fa fa-twitter"></i></a></li>
+                                            <li><a href="http://www.google.com/" TARGET="_blank"><i class="fa fa-google-plus"></i></a></li>
+                                            <li><a href="https://www.linkedin.com/" TARGET="_blank"><i class="fa fa-linkedin"></i></a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -638,6 +660,8 @@
                                         <li><a href="#">General Surgery</a></li>
                                         <li><a href="#">Physiotherapy</a></li>
                                         <li><a href="#">Ltricies lputate</a></li>
+        </ br>
+                                        <h4><A HREF="http://www.google.com/" TARGET="_blank" LINK="red" ALINK="yellow">Google Search Engine</A></h4> 
                                     </ul>
                                 </div>
                             </div>
@@ -646,10 +670,11 @@
                 </div>
             </div>
         </div>
+        
     </footer>
-    <div class="hs_copyright"> Copyright © 2016 Patient Doctor Assistant All Rights Reserved </div>
+    <div class="hs_copyright"> Copyright © 2016 Health Services Coordinator All Rights Reserved </div>
     <!--main js file start-->
-    <script type="text/javascript" src="~/Scripts/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/jquery-2.2.3.min.js"></script>
     <script type="text/javascript" src="~/Scripts/bootstrap.min.js"></script>
     <script type="text/javascript" src="~/Scripts/owl.carousel.js"></script>
     <script type="text/javascript" src="~/Scripts/jquery.bxslider.js"></script>

@@ -11,7 +11,7 @@
 		var $this=$(this);
 		var topPosition=$this.position().top;
 		var updatePosition;
-		$(window).on('scroll',function(){
+		$(window).scroll(function(){
 			updatePosition=$(this).scrollTop()+topPosition;
 			$this.stop(true,false).animate({top:updatePosition},speed,easing);
 			$().NavigationMenuHighlight();
@@ -36,7 +36,7 @@
 jQuery.noConflict();
 (function($){
 	/* functions to run when content loads */
-	$(window).on('load',function(){
+	$(window).load(function(){
 		$("#navigation_menu a,a[href='#top'],a[rel='m_PageScroll2id']").mPageScroll2id();
 		$("#navigation_menu a,a[href='#top'],a[rel='m_PageScroll2id']").address();
 		$.address.externalChange(function(event){ 
@@ -54,7 +54,7 @@ jQuery.noConflict();
 		$("#navigation_menu").NavigationMenu(1300,"easeOutExpo");
 	});
 	/* functions to run when browser is resized */
-	$(window).on('resize',function(){
+	$(window).resize(function(){
 		//your functions here
 	});
 })(jQuery);

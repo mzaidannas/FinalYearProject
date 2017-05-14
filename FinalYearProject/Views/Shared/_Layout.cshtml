@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - Patient Doctor Assistant</title>
+    <title>@ViewBag.Title - Health Services Coordinator</title>
 
 
     <!-- main css -->
@@ -21,12 +21,13 @@
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 clearfix">
                     <div class="col-lg-2 col-md-2 col-sm-12">
-                        <div id="hs_logo"> <a data-link="hc_home"> <img src="~/images/logo.png" alt=""> </a> </div>
+                        <div id="hs_logo"> <a data-link="hc_home"> <img src="~/images/logo1.png" alt=""> </a> </div>
                         <!-- #logo -->
+
                     </div>
+                    <br /> <br /> 
                     <div class="col-lg-8 col-md-8 col-sm-12">
                         <button type="button" class="hs_nav_toggle navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">Menu<i class="fa fa-bars"></i></button>
-                        <br />
                         <nav>
                             <ul class="hs_menu collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                                 <li data-link="hc_home"><a href="#" onclick="location.href='@Url.Action("Index","Doctor")'" class="active">Home</a></li>
@@ -38,10 +39,8 @@
                                 </li>
                             </ul>
                         </nav>
-                        <br /><br />
-                    </div>
-                    <div class="col-lg-2 col-md-2 col-sm-4">
-                        <br />
+                   </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4">           
                         <div class="hs_social" style="margin-left:80px">
                             <ul>
                                 <li data-link="hc_about"><a href="#" onclick="location.href='@Url.Action("Logout","Doctor")'">Logout</a>
@@ -68,7 +67,6 @@
 
     </header>
     <!--header end-->
-    <br /><br />
     <div class="container body-content">
         @RenderBody()
         <hr />
@@ -82,15 +80,15 @@
                             <div class="col-lg-6 col-md-5 col-sm-12">
                                 <h4 class="hs_heading">Get in touch !</h4>
                                 <div class="hs_contact_detail">
-                                    <p><i class="fa fa-map-marker"></i>Punjab University College of Information Technology PUCIT</p>
-                                    <p><i class="fa fa-mobile-phone"></i> +92 312 - 43 45 811</p>
+                                    <p><i class="fa fa-map-marker"></i>National University of Science and Technology (PNEC) (NUST)</p>
+                                    <p><i class="fa fa-mobile-phone"></i> +92 334 - 36 49 937</p>
                                     <div class="clearfix"></div>
                                     <div class="hs_social">
                                         <ul>
-                                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                            <li><a href="https://www.facebook.com/Patient-Doctor-Assistant-1633105526714618/" TARGET="_blank"><i class="fa fa-facebook"></i></a></li>
+                                            <li><a href="https://www.twitter.com/" TARGET="_blank"><i class="fa fa-twitter"></i></a></li>
+                                            <li><a href="http://www.google.com/" TARGET="_blank"><i class="fa fa-google-plus"></i></a></li>
+                                            <li><a href="https://www.linkedin.com/" TARGET="_blank"><i class="fa fa-linkedin"></i></a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -114,11 +112,11 @@
             </div>
         </div>
     </footer>
-    <div class="hs_copyright"> Copyright © 2016 Patient Doctor Assistant All Rights Reserved </div>
+    <div class="hs_copyright"> Copyright © 2016 Health Services Coordinator All Rights Reserved </div>
     <!--main js file start-->
-    <script type="text/javascript" src="~/Scripts/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/jquery-2.2.3.min.js"></script>
     <script type="text/javascript" src="~/Scripts/bootstrap.min.js"></script>
-    <script type="text/javascript" src="~/Scripts/modernizr-2.8.3.js"></script>
+    <script src="~/Scripts/modernizr-2.8.3.js"></script>
     <!--main js file end-->
 </body>
 

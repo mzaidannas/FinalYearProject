@@ -23,7 +23,7 @@ namespace FinalYearProject.Controllers
             List<Full_Doctor> full_doc = new List<Full_Doctor>();
             List<Full_Comment> full_com = new List<Full_Comment>();
 
-            var query1 = db.Comments.Include("Patient.Person");
+            var query1 = db.Comments;
             foreach (var temp1 in query1)
             {
                 Full_Comment comment = new Full_Comment();
