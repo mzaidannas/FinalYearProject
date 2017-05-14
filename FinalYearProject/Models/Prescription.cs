@@ -10,8 +10,7 @@
 namespace FinalYearProject.Models
 {
     using System;
-    using System.Collections.Generic;
-    
+
     public partial class Prescription
     {
         public int Prescription_Id { get; set; }

@@ -10,8 +10,7 @@
 namespace FinalYearProject.Models
 {
     using System;
-    using System.Collections.Generic;
-    
+
     public partial class Comment
     {
         public int Comment_Id { get; set; }

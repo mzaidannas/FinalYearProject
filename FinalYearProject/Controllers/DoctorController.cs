@@ -1,15 +1,11 @@
 ﻿using FinalYearProject.Models;
-using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Web;
 using System.Web.Mvc;
 using TableDependency.EventArgs;
 using TableDependency.SqlClient;
 using PagedList;
-using PagedList.Mvc;
 
 namespace FinalYearProject.Controllers
 {

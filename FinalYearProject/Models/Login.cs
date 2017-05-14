@@ -9,9 +9,7 @@
 
 namespace FinalYearProject.Models
 {
-    using System;
-    using System.Collections.Generic;
-    
+
     public partial class Login
     {
         public int Person_Id { get; set; }

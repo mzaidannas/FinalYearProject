@@ -9,9 +9,7 @@
 
 namespace FinalYearProject.Models
 {
-    using System;
-    using System.Collections.Generic;
-    
+
     public partial class PatientDoctors
     {
         public int Pat_Id { get; set; }

@@ -9,9 +9,7 @@
 
 namespace FinalYearProject.Models
 {
-    using System;
-    using System.Collections.Generic;
-    
+
     public partial class Appointment
     {
         public int Appointment_Id { get; set; }

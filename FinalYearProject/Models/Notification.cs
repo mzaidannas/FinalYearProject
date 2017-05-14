@@ -10,8 +10,7 @@
 namespace FinalYearProject.Models
 {
     using System;
-    using System.Collections.Generic;
-    
+
     public partial class Notification
     {
         public int Notification_Id { get; set; }
