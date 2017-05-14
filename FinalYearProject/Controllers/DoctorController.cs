@@ -21,9 +21,8 @@ namespace FinalYearProject.Controllers
             db = new DatabaseEntities();
 
             //Database Change Detection
-            //var connectionString = @"Data Source=ANNAS;Database=PDA;User ID=sa;Password=52114799;MultipleActiveResultSets=True;App=EntityFramework;";
-            //var connectionString = @"Data Source=810649c0-b374-4c9f-83f4-a72200d16193.sqlserver.sequelizer.com;Database=db810649c0b3744c9f83f4a72200d16193;User ID=ysuguooalqevqoko;Password=RRvkdxvyqvWeDjBw3H7DdZyWEPsc3yPuEMuHzT4Jvy8zVDDrkV7fK3DYsGNwesEZ;MultipleActiveResultSets=True;App=EntityFramework";
-            var connectionString = @"Data Source=de08b7d6-3bc7-48a4-aa5e-a773012d7c14.sqlserver.sequelizer.com;Database=dbde08b7d63bc748a4aa5ea773012d7c14;User ID=svklontbafysbpqu;Password=Dx7AVDxPiMaqsbmuzSSKTqZqBnn4tQ3XaJeTsEFnBRs5FETabMrsYbenFQ7GqBuz;;MultipleActiveResultSets=True;App=EntityFramework";
+            var connectionString = @"Data Source=8e82b186-e6fe-4dd6-b9f5-a7730133cfe4.sqlserver.sequelizer.com;Database=db8e82b186e6fe4dd6b9f5a7730133cfe4;User ID=oopnwwkrvaezvyjf;Password=b6TUwi3MrL3rH8QFoQCKVWqPQ6pPhUJk4ZaD2rgAQ7pq7ggYtMPiBTymNddy2mED;MultipleActiveResultSets=True;App=EntityFramework";
+            
             var tableDependency = new SqlTableDependency<Appointment>(connectionString, "Appointments");
 
             tableDependency.OnChanged += tableDependency_Changed;
