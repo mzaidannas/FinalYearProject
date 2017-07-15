@@ -18,7 +18,6 @@ namespace FinalYearProject.Models
         public System.DateTime Date { get; set; }
         public System.TimeSpan Start { get; set; }
         public System.TimeSpan End { get; set; }
-    
         public virtual Doctor Doctor { get; set; }
         public virtual Patient Patient { get; set; }
     }
