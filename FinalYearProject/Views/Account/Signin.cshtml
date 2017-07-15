@@ -137,7 +137,6 @@
                                                 </div>
                                                 <div class="form-group">
                                                     <select class="form-control" id="Gender" name="Gender">
-                                                        <option>Select Gender</option>
                                                         <option>Male</option>
                                                         <option>Female</option>
                                                         <option>Other</option>
@@ -148,12 +147,11 @@
                                                 </div>
                                                 <div class="form-group">
                                                     <select id="Type" name="Type" class="form-control">
-                                                        <option>Select Type</option>
+                                                        <option>Dentist</option>
                                                         <option>Audiologist</option>
                                                         <option>Allergist</option>
                                                         <option>Anesthesiologist</option>
                                                         <option>Cardiologist</option>
-                                                        <option>Dentist</option>
                                                         <option>Dermatologist</option>
                                                         <option>Endocrinologist</option>
                                                         <option>Epidemiologist</option>
@@ -206,53 +204,56 @@
                                                 <span>Confirm details before you submit.</span>
                                                 <div class="step-confirm">
                                                     <div class="row">
-                                                        @{
-                                                            var value = Request.Form.GetValues("#Name");
-                                                        }
-                                                        <div class="col-xs-5">Name</div>
-                                                        <div class="col-xs-5"></div>
-                                                    </div>
-                                                    <div class="row">
-                                                        @{
-                                                            var UserName = Request.Form.GetValues("#Name");
-                                                        }
-                                                        <div class="col-xs-5">@UserName</div>
-                                                        <div class="col-xs-5"></div>
+                                                        <div class="col-xs-5">Username</div>
+                                                        <div class="col-xs-5" id="Username_Confirm"></div>
                                                     </div>
                                                     <div class="row">
                                                         <div class="col-xs-5">Password</div>
-                                                        <div class="col-xs-5"></div>
+                                                        <div class="col-xs-5" id="Password_Confirm"></div>
                                                     </div>
                                                     <div class="row">
                                                         <div class="col-xs-5">Email</div>
-                                                        <div class="col-xs-5"></div>
+                                                        <div class="col-xs-5" id="Email_Confirm"></div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-xs-5">Name</div>
+                                                        <div class="col-xs-5" id="Name_Confirm"></div>
                                                     </div>
                                                     <div class="row">
                                                         <div class="col-xs-5">CNIC</div>
-                                                        <div class="col-xs-5"></div>
+                                                        <div class="col-xs-5" id="CNIC_Confirm"></div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-xs-5">Email</div>
+                                                        <div class="col-xs-5" id="Email_Confirm"></div>
                                                     </div>
                                                     <div class="row">
                                                         <div class="col-xs-5">Address</div>
-                                                        <div class="col-xs-5"></div>
+                                                        <div class="col-xs-5" id="Address_Confirm"></div>
                                                     </div>
                                                     <div class="row">
-                                                        <div class="col-xs-5">Date of Birth</div>
-                                                        <div class="col-xs-5"></div>
+                                                        <div class="col-xs-5">DOB</div>
+                                                        <div class="col-xs-5" id="DOB_Confirm"></div>
                                                     </div>
                                                     <div class="row">
                                                         <div class="col-xs-5">Gender</div>
-                                                        <div class="col-xs-5"></div>
+                                                        <div class="col-xs-5" id="Gender_Confirm"></div>
                                                     </div>
                                                     <div class="row">
-                                                        <div class="col-xs-5">Career Start</div>
-                                                        <div class="col-xs-5"></div>
-                                                    </div><div class="row">
+                                                        <div class="col-xs-5">Career_Start</div>
+                                                        <div class="col-xs-5" id="Career_Start_Confirm"></div>
+                                                    </div>
+                                                    <div class="row">
                                                         <div class="col-xs-5">Type</div>
-                                                        <div class="col-xs-5"></div>
+                                                        <div class="col-xs-5" id="Type_Confirm"></div>
                                                     </div>
                                                     <div class="row">
-                                                        <div class="col-xs-5">Average Duration</div>
-                                                        <div class="col-xs-5"></div>
+                                                        <div class="col-xs-5">Avarage_Duration</div>
+                                                        <div class="col-xs-5" id="Avarage_Duration_Confirm"></div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-xs-5">Phone_No</div>
+                                                        <div class="col-xs-5" id="Phone_No_Confirm"></div>
                                                     </div>
                                                 </div>
                                             </li>

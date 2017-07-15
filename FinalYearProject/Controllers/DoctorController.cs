@@ -21,7 +21,7 @@ namespace FinalYearProject.Controllers
             db = new DatabaseEntities();
 
             //Database Change Detection
-            var connectionString = @"Data Source=8e82b186-e6fe-4dd6-b9f5-a7730133cfe4.sqlserver.sequelizer.com;Database=db8e82b186e6fe4dd6b9f5a7730133cfe4;User ID=oopnwwkrvaezvyjf;Password=b6TUwi3MrL3rH8QFoQCKVWqPQ6pPhUJk4ZaD2rgAQ7pq7ggYtMPiBTymNddy2mED;MultipleActiveResultSets=True;App=EntityFramework";
+            var connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\My Documents\Visual Studio 2015\Projects\Web Development\FinalYearProject\FinalYearProject\App_Data\Database.mdf;Integrated Security=True";
             
             var tableDependency = new SqlTableDependency<Appointment>(connectionString, "Appointments");
 

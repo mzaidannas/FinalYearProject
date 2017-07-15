@@ -86,6 +86,8 @@ jQuery(function($) {
             if (current.index() < 2) {
                 showHideWizardPage(current.next(), navstep.next());
             }
+
+            setconfirmvalues();
         } else if ($(this).parent().attr('id') === "prev") {
             e.preventDefault();
             if (current.prev().length === 0) return;
@@ -114,12 +116,42 @@ jQuery(function($) {
         $('#submit').toggleClass("remove", index < max);
         $('#stepNo').text(index + 1);
     }
-    function setDynamics(current) {
-        var index = current.index();
-        var max = current.parent().children().length - 1;
-        $('#prev').toggleClass("invisible", index < 1);
-        $('#next').toggleClass("remove", index >= max);
-        $('#submit').toggleClass("remove", index < max);
-        $('#stepNo').text(index + 1);
+    function setconfirmvalues()
+    {
+        var value = $("#Name").val();
+        $("#Name_Confirm").text(value);
+
+        var value = $("#CNIC").val();
+        $("#CNIC_Confirm").text(value);
+
+        var value = $("#Address").val();
+        $("#Address_Confirm").text(value);
+
+        var value = $("#DOB").val();
+        $("#DOB_Confirm").text(value);
+
+        var value = $("#Gender").val();
+        $("#Gender_Confirm").text(value);
+
+        var value = $("#Career_Start").val();
+        $("#Career_Start_Confirm").text(value);
+
+        var value = $("#Type").val();
+        $("#Type_Confirm").text(value);
+
+        var value = $("#Avarage_Duration").val();
+        $("#Avarage_Duration_Confirm").text(value);
+
+        var value = $("#Phone_No").val();
+        $("#Phone_No_Confirm").text(value);
+
+        var value = $("#Username").val();
+        $("#Username_Confirm").text(value);
+
+        var value = $("#Email").val();
+        $("#Email_Confirm").text(value);
+
+        var value = $("#Password").val();
+        $("#Password_Confirm").text(value);
     }
 });
